@@ -15,11 +15,11 @@ export default class UserModel {
   }
 
   public async create(user: IUser): Promise<IUser> {
-    const { username, classe, level } = user;
+    const { username, classe, level, password } = user;
 
     const result = await this.connection.execute<ResultSetHeader>(
-      'INSERT INTO Trybesmith.Users (username, classe, level) VALUES (?, ?, ?)',
-      [username, classe, level],
+      'INSERT INTO Trybesmith.Users (username, classe, level, password) VALUES (?, ?, ?, ?)',
+      [username, classe, level, password],
     );
     const [dataInserted] = result;
     const { insertId } = dataInserted;

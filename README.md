@@ -1,6 +1,6 @@
 ## O que foi desenvolvido nesse projeto
 
-Back-end apenas:
+Back-End:
 
 Foi criado uma loja de itens medievais, no formato de uma _API_, utilizando **Typescript**.
   
